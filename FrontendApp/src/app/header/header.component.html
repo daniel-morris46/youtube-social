@@ -1,0 +1,10 @@
+<div class="title" (click)="goHome()">
+  <img class="youtube-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/YouTube_play_buttom_icon_%282013-2017%29.svg/1200px-YouTube_play_buttom_icon_%282013-2017%29.svg.png">
+  <span class="title-text">YouTube Social</span>
+</div>
+<div class="username">
+  <span>{{profile?.name}}</span>
+  <img [src]="profile?.profileImageUrl">
+  <span style="padding-left: 10px">|</span>
+  <button mat-button (click)="signOut()">Sign Out</button>
+</div>

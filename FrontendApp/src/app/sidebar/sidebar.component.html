@@ -1,0 +1,12 @@
+<div class="sidebar-item" routerLink="/feed" [ngClass]="{'selected': currentRoute == '/feed'}">
+  <fa-icon class="sidebar-icon" [icon]="faNewspaper" size="xs"></fa-icon>
+  <span class="sidebar-text">Feed</span>
+</div>
+<div class="sidebar-item" routerLink="/likedVideos" [ngClass]="{'selected': currentRoute == '/likedVideos'}">
+  <fa-icon class="sidebar-icon" [icon]="faThumbsUp" size="xs"></fa-icon>
+  <span class="sidebar-text">Liked Videos</span>
+</div>
+<div class="sidebar-item" routerLink="/friends" [ngClass]="{'selected': currentRoute == '/friends'}">
+  <fa-icon class="sidebar-icon" [icon]="faUserFriends" size="xs"></fa-icon>
+  <span class="sidebar-text">Friends</span>
+</div>

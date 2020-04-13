@@ -1,0 +1,12 @@
+<div class="videos-container">
+  <mat-card class="video" *ngFor="let video of videos$ | async">
+    <mat-card-title class="video-title" (click)="openVideo(video)">{{video.name}}</mat-card-title>
+    <mat-card-content class="video-content">
+      <img class="video-image" mat-card-image [src]="video.imageUrl" (click)="openVideo(video)">
+    </mat-card-content>
+    <mat-card-actions>
+      <button class="share-button" mat-button (click)="share(video)">SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+

@@ -1,0 +1,7 @@
+<div class="posts-container">
+    <mat-card class="no-posts" *ngIf = "(feed | async)?.length == 0">
+      <h2 class="no-posts-heading">Your feed is empty</h2>
+      <span>Try sharing some of your liked videos or adding friends to see content here.</span>
+    </mat-card>
+  <app-post class="post" *ngFor="let post of feed | async" [post]="post"></app-post>
+</div>

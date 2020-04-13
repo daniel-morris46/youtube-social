@@ -1,0 +1,8 @@
+<mat-card class="card" *ngIf="video$ | async as video">
+  <mat-card-subtitle>{{post.userName}} shared a video at {{post.createdDate.toLocaleString()}}</mat-card-subtitle>
+  <mat-card-title class="video-title" (click)="openVideo(video.id)"><span class="video-title-text">{{video.name}}</span></mat-card-title>
+  <mat-card-content class="card-content">
+    <iframe width="560" height="315" [src]="sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + video.id)"
+            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </mat-card-content>
+</mat-card>

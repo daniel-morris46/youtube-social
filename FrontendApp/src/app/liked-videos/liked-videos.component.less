@@ -1,0 +1,49 @@
+:host {
+  width: calc(100% - 200px);
+}
+
+.videos-container {
+  display: flex;
+  height: calc(100vh - 50px);
+  flex-wrap: wrap;
+  overflow-y: auto;
+
+  .video {
+    width: 250px;
+    height: 220px;
+    padding: 10px;
+    margin: 10px;
+
+    .video-title {
+      font-size: 16px;
+      padding-bottom: 10px;
+      height: 50px;
+      text-align: center;
+
+      &:hover {
+        cursor: pointer;
+        color: blue;
+        text-decoration: underline;
+      }
+    }
+
+    .video-content {
+      display: flex;
+      justify-content: center;
+    }
+
+    .video-image {
+      width: 80%;
+      margin-left: 10px;
+
+      &:hover {
+        cursor: pointer;
+        box-shadow: 0 0 10px #0088ff;
+      }
+    }
+
+    .share-button {
+      margin-left: 20px;
+    }
+  }
+}

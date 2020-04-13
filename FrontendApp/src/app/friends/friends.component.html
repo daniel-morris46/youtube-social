@@ -1,0 +1,29 @@
+<div class="friends-container" *ngIf="profile">
+  <div class="profile-heading">
+    <img class="profile-image" [src]="profile.profileImageUrl">
+    <span class="profile-name">{{profile.name}}</span>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="friends-list">
+    <h2>Friends: </h2>
+    <mat-list role="list" >
+      <mat-list-item class="friends-list-item" role="listitem"*ngFor="let friend of friends">
+        <div class="friends-list-item">
+          {{friend.name}}
+          <button class="remove-friend-button" mat-flat-button color="warn" (click)="removeFriend(friend)">Remove Friend</button>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </div>
+  <div class="other-users-list">
+    <h2>Other Users: </h2>
+    <mat-list role="list" >
+      <mat-list-item class="friends-list-item" role="listitem"*ngFor="let friend of otherUsers">
+        <div class="friends-list-item">
+          {{friend.name}}
+          <button class="remove-friend-button" mat-flat-button (click)="addFriend(friend)">Add Friend</button>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </div>
+</div>

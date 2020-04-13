@@ -1,0 +1,41 @@
+:host {
+  width: 200px;
+  height: calc(100vh - 50px);
+  background-color: #808080;
+  display: inline-block;
+
+  .sidebar-item {
+    display: flex;
+    margin: auto;
+    padding-left: 20px;
+    height: 50px;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #686868;
+    }
+
+    &:active {
+      outline: none;
+    }
+
+    .sidebar-icon {
+      font-size: 20px;
+    }
+
+    .sidebar-text {
+      padding-left: 10px;
+      padding-top: 3px;
+    }
+
+  }
+
+}
+
+.selected {
+  background-color: #686868;
+  &:focus {
+    outline: none;
+  }
+}
